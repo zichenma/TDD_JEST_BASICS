@@ -1,0 +1,22 @@
+{
+  "name": "tdd_jest_basics",
+  "version": "1.0.0",
+  "description": "TDD idea and JEST basics",
+  "main": "math.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zichenma/TDD_JEST_BASICS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zichenma/TDD_JEST_BASICS/issues"
+  },
+  "homepage": "https://github.com/zichenma/TDD_JEST_BASICS#readme",
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}
