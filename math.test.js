@@ -1,5 +1,4 @@
-const math = require('./math.js');
-const { add, minus, multi } = math;
+import { add, minus, multi } from './math';
 
 
 test('testing add 3 + 7', () => {
@@ -14,8 +13,6 @@ test('testing multi 3 * 3', () => {
     expect(multi(3, 3)).toBe(9);
 })
 
-// unit test => module test
-// integration test => multiple modules test
 
 
 
