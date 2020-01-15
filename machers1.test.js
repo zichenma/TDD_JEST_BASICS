@@ -1,10 +1,10 @@
 test('toMatch matcher', () => {
     const str = 'http://www.dell-lee.com';
-    expect(str).toMatch(/dell/); 
+    expect(str).toMatch(/dell-lee/); 
 })
 
 
-test('toMatch matcher', () => {
+test('toContain', () => {
     const arr = ['dell', 'lee', 'imooc'];
     const data = new Set(arr);
     expect(arr).toContain('dell'); 

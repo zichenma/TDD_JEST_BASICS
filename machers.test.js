@@ -4,7 +4,7 @@ test('toMatch matcher', () => {
 })
 
 
-test('toMatch matcher', () => {
+test('toContain', () => {
     const arr = ['dell', 'lee', 'imooc'];
     const data = new Set(arr);
     expect(arr).toContain('dell'); 
