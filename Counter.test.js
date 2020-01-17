@@ -3,7 +3,7 @@ import Counter from './Counter';
 describe('Counter tesing cdoe'), () => {
  // 相当于在左右componet， 自动添加
  let counter = null;
-
+ console.log('describe 1');
 //beforeAll 钩子函数，用于初始化，在所有测试用例前会被调用
 // 执行顺序： 1
 beforeAll(() => {
@@ -30,7 +30,17 @@ afterAll(() => {
 })
 
 describe('testing add relatived code', () => {
-    test('test addOne in Counter', () => {
+    console.log('describe 2');
+
+    beforeEach(() => {
+        console.log('beforeEach, test add');
+    })
+
+    beforeAll(() => {
+        console.log('beforeAll test add');
+    })
+    // only test this test case
+    test.only('test addOne in Counter', () => {
         console.log('addOne in Counter');
         counter.addOne();
         expect(counter.number).toBe(1);
@@ -45,6 +55,8 @@ describe('testing add relatived code', () => {
 
 
 describe('testing minus relatived code', () => {
+    console.log('describe 3');
+
     test('test addOne in Counter', () => {
         console.log('addOne in Counter');
         counter.minusOne();
@@ -70,6 +82,20 @@ test('test minusTwo in Counter', () => {
     expect(counter.number).toBe(-2);
 });
 }
+
+
+// describe {
+//     console.log(1)
+//             1. beforeAll
+//             3 .beforeEach
+//         describe {
+//             2. beforeAll
+//             4. beforeEach
+//         }
+//     console.log(2)
+//         5. afterEach
+//         6. afterAll
+// }
 
 
 
