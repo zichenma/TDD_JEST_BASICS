@@ -1,16 +1,27 @@
-import axios from 'axios';
-
-export const runCallback = (callback) => {
-    // 如果不加 return 测试则不会通过
-    // return callback();
-    callback('abc');
+export const generateConfig = () => {
+    return {
+        server: 'http://localhost',
+        port: 8080,
+        domain: 'localhost',
+        time: '2020'
+    }
 }
 
-// 接收一个类，创建一个实例
-export const createObject = classItem => {
-    new classItem();
+export const generateAnotherConfig = () => {
+    return {
+        server: 'http://localhost',
+        port: 8080,
+        domain: 'localhost',
+        time: '2020'
+    }
 }
 
-export const getData = () => {
-    return axios.get('/api').then(res => res.data)
+// 测试动态数据： new Date()
+export const generateThirdConfig = () => {
+    return {
+        server: 'http://localhost',
+        port: 8080,
+        domain: 'localhost',
+        time: new Date()
+    }
 }
