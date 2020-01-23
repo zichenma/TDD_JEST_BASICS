@@ -1,27 +1,12 @@
-export const generateConfig = () => {
-    return {
-        server: 'http://localhost',
-        port: 8080,
-        domain: 'localhost',
-        time: '2020'
-    }
+import axios from 'axios';
+
+export const fetchData = () => {
+    return axios.get('/').then(res => res.data);
 }
 
-export const generateAnotherConfig = () => {
-    return {
-        server: 'http://localhost',
-        port: 8080,
-        domain: 'localhost',
-        time: '2020'
-    }
+export const getNumber =() => {
+    return 123;
 }
 
-// 测试动态数据： new Date()
-export const generateThirdConfig = () => {
-    return {
-        server: 'http://localhost',
-        port: 8080,
-        domain: 'localhost',
-        time: new Date()
-    }
-}
+// assume backend return such data:
+// '(function(){return '123'})()'
